@@ -1,0 +1,7 @@
+[core]
+	editor = vim
+[merge]
+	tool = vimdiff
+[user]
+	name = Chris Zehr
+	email = chris.zehr@stackpath.com
