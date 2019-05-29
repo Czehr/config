@@ -17,21 +17,28 @@ call plug#end()
 set nocompatible
 filetype plugin on
 syntax on
+
+" Colors
 set background=dark
 colorscheme gruvbox
+
+" This is awesome
 set number relativenumber
+
+" Incremental highlighted search
 set hlsearch
+set incsearch
 
 " Splits open at the bottom and right
 set splitbelow splitright
 
-" Tab is 4 spaces
+" Tab is always 4 spaces
 set ai
 set ts=4
 set sw=4
 set et
 
-" Enable autocompletion
+" Enable autocompletion for ex commands
 set wildmode=longest,list,full
 
 " Remove delay when exiting visual mode
