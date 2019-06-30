@@ -21,9 +21,13 @@ syntax on
 " Colors
 set background=dark
 colorscheme gruvbox
+hi Normal guibg=NONE ctermbg=NONE
 
 " This is awesome
 set number relativenumber
+
+" Does what it says
+set cursorline
 
 " Incremental highlighted search
 set hlsearch
