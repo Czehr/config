@@ -28,6 +28,7 @@ set number relativenumber
 
 " Does what it says
 set cursorline
+set colorcolumn=80
 
 " Incremental highlighted search
 set hlsearch
