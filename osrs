@@ -1,0 +1,6 @@
+#~/bin/bash
+
+
+# Place in /usr/local/bin/osrs
+eval java -Duser.home="/home/czehr/.jagex" -jar /usr/share/runelite/RuneLite.jar 
+
