@@ -2,5 +2,6 @@
 
 
 # Place in /usr/local/bin/osrs
+export PATH="/usr/lib/jvm/java-10-openjdk/bin/:$PATH"
 eval java -Duser.home="/home/czehr/.jagex" -jar /usr/share/runelite/RuneLite.jar 
 
