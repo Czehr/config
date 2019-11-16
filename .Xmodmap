@@ -3,3 +3,7 @@ remove Lock = Caps_Lock
 keysym Escape = Caps_Lock
 keysym Caps_Lock = Escape
 add Lock = Caps_Lock
+
+! Right Super acts like Alt
+remove mod4 = Super_R
+add mod1 = Super_R
