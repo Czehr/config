@@ -11,6 +11,7 @@ Plug 'morhetz/gruvbox'
 Plug 'vimwiki/vimwiki'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-commentary'
+Plug 'tikhomirov/vim-glsl'
 call plug#end()
 
 " Basics
@@ -51,6 +52,9 @@ set timeoutlen=1000 ttimeoutlen=0
 
 " Disables automatic commenting on newline:
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Enable Vulkan syntax highlighting
+autocmd FileType cpp,c source ~/.vim/syntax/vulkan1.0.vim
 
 " Don't show whitespace in vim-airline
 autocmd VimEnter * AirlineToggleWhitespace

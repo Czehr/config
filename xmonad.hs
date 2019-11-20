@@ -15,7 +15,9 @@ import XMonad.Layout.Spacing hiding ( (|||) )
 import XMonad.Layout.LayoutCombinators
 import XMonad.Layout.Named
 import XMonad.Hooks.FadeInactive
+import XMonad.Hooks.ManageDocks
 import XMonad.Actions.SpawnOn
+import XMonad.Hooks.EwmhDesktops(fullscreenEventHook, ewmh)
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
@@ -267,16 +269,16 @@ myLogHook = fadeInactiveCurrentWSLogHook fadeAmount
 -- per-workspace layout choices.
 --
 -- By default, do nothing.
--- myStartupHook = return ()
-myStartupHook = do
-    spawnOn "2" "st -A .4 -e pipes.sh"
+myStartupHook = return ()
+-- myStartupHook = do
+--     spawnOn "2" "st -A .4 -e pipes.sh"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
 
 -- Run xmonad with the settings you specify. No need to modify this.
 --
-main = xmonad defaults
+main = xmonad $ docks defaults
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will
@@ -284,7 +286,7 @@ main = xmonad defaults
 --
 -- No need to modify this.
 --
-defaults = def {
+defaults = ewmh $ def {
       -- simple stuff
         terminal           = myTerminal,
         focusFollowsMouse  = myFocusFollowsMouse,
