@@ -29,7 +29,7 @@ myTerminal      = "st"
 
 -- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
-myFocusFollowsMouse = True
+myFocusFollowsMouse = False
 
 -- Whether clicking on a window to focus also passes the click to the window
 myClickJustFocuses :: Bool
@@ -204,10 +204,11 @@ myLayout =  named "SpacedTiled" spacedtiled
 -- myLayout = Full
   where
     -- default tiling algorithm partitions the screen into two panes
-    tiled   = Tall nmaster delta ratio
+    tiled   = avoidStruts(Tall nmaster delta ratio)
     -- spaced versions
-    spacedtiled = addSpace(Tall nmaster delta ratio) 
-    spacedfull = spacing 25 $ Full
+    spacedtiled = avoidStruts(addSpace(Tall nmaster delta ratio))
+    -- spacedfull = avoidStruts(spacing 25 $ Full)
+    spacedfull = avoidStruts(Full)
 
     -- The default number of windows in the master pane
     nmaster = 1
